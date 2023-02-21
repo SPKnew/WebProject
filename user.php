@@ -8,19 +8,13 @@
     }
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container">
+
+<?php include("head.php"); ?> 
+
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="container">
         <?php 
 
             if (isset($_SESSION['user_login'])) {
@@ -30,8 +24,41 @@
                 $row = $stmt->fetch(PDO::FETCH_ASSOC);
             }
         ?>
-        <h3 class="mt-4">Welcome, <?php echo $row['firstname'] . ' ' . $row['lastname'] ?></h3>
-        <a href="logout.php" class="btn btn-danger">ออกจากระบบ</a>
     </div>
-</body>
-</html>
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <?php include("navbar.php"); ?> 
+  <!-- /.navbar -->
+  <?php include("menu.php"); ?> 
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">ข่าวสาร</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">---</a></li>
+              <li class="breadcrumb-item active">---</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+  <?php include("script.php"); ?> 
+  </body>
+  <?php include("footer.php"); ?>
+  </html>

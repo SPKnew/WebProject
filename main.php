@@ -24,8 +24,6 @@
                 $row = $stmt->fetch(PDO::FETCH_ASSOC);
             }
         ?>
-        <h3 class="mt-4">Welcome Admin, <?php echo $row['firstname'] . ' ' . $row['lastname'] ?></h3>
-        <a href="logout.php" class="btn btn-danger">ออกจากระบบ</a>
     </div>
 <div class="wrapper">
 
@@ -41,28 +39,18 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">ข่าวสาร</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item"><a href="#">---</a></li>
+              <li class="breadcrumb-item active">---</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
 
-
-  
-  <!--   <footer class="main-footer">
-      <strong>Copyright &copy; 2022 <a href="https://my.ku.th/">KASETSART UNIVERSITY SRIRACHA CAMPUS</a>.</strong>
-      All rights reserved.
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
-      </div>
-    </footer> -->
-    
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->

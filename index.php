@@ -15,16 +15,12 @@
 
 <style>
 .bgpageindex {
-    /* background-image: url('img/bgindex.jpg'); */
     background: linear-gradient(rgba(250,250,250, 0.3),
     rgba(250,250,250, 0.6)), url('img/bgindex.jpg');  
     background-repeat: no-repeat;
     height: 83vh;
   background-attachment: fixed;
   background-size: 100% 100%;
-  
-    
-
 }
 </style>
 
@@ -42,11 +38,8 @@
 
         <!--     <div class="container"> -->
         <div class="container py-5">
-            <div class="row g-0 align-items-center" style=
-            "margin-right: 320px;
-            margin-left: 320px;">
-                
-                    <div class="card cascading-right" style="background: #c1eefb;backdrop-filter: blur(30px); border-radius: 2rem;">
+            <div class="row g-0 align-items-center" style="margin-right: 320px; margin-left: 320px;">
+                    <div class="card cascading-right" style="background: #c1eefb;backdrop-filter: blur(10px); border-radius: 2rem;">
                         <div class="card-body p-5 shadow-5 text-left">
                             <h3 class="fw-bold mb-2 text-uppercase">เข้าสู่ระบบ KUSRC สหกิจศึกษา</h3>
                             <hr>
@@ -56,7 +49,7 @@
                                     <?php 
                         echo $_SESSION['error'];
                         unset($_SESSION['error']);
-                    ?>
+                                    ?>
                                 </div>
                                 <?php } ?>
                                 <?php if(isset($_SESSION['success'])) { ?>
@@ -64,7 +57,7 @@
                                     <?php 
                         echo $_SESSION['success'];
                         unset($_SESSION['success']);
-                    ?>
+                                    ?>
                                 </div>
                                 <?php } ?>
 
@@ -79,26 +72,20 @@
                                     <input type="password" placeholder="Password" class="form-control" name="password">
                                 </div>
                                 <button type="submit" name="signin" class="btn btn-success btn-lg">เข้าสู่ระบบ</button>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                                    <label class="form-check-label" for="form2Example31"> Remember me </label>
-                                </div>
+                                
                             </form>
                             <hr>
                             <p>ยังไม่เป็นสมาชิกใช่ไหม คลิ๊กที่นี่เพื่อ <a href="signup.php">สมัครสมาชิก</a></p>
                         </div>
                     </div>
-                
             </div>
         </div>
     </div>
-
-           
 </body>
 <footer class="text-center text-white fixed-bottom" style="background-color: #21081a;">
     <div class="text-center p-3" style="background-color: #03a96b;">
         KUSRC:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <a class="text-white" href="https://reg.src.ku.ac.th/res/">มหาลัยเกษตรศาสตร์ ศรีราชา</a>
     </div>
 </footer>
 </html>
